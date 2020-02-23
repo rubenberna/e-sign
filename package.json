@@ -1,0 +1,27 @@
+{
+  "name": "easy-contracts_aws",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.437.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "dynamodb": "^1.2.0",
+    "ejs": "latest",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jsforce": "^1.9.3",
+    "nodemailer": "^5.1.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "client": "npm run serve --prefix client",
+    "build-client": "cd client && npm run build",
+    "server": "nodemon app.js",
+    "deploy": "eb deploy amazon",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
